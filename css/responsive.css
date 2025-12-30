@@ -1,0 +1,303 @@
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background-color: #053717;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+    
+    h3 {
+        font-size: 1.8rem !important;
+    }
+    
+    .audience-card,
+    .feature,
+    .benefit {
+        min-width: 100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+    
+    /* MAP FIX FOR MOBILE */
+    .map-container {
+        flex-direction: column;
+    }
+    
+    #restaurant-map {
+        height: 300px !important;
+        min-height: 300px !important;
+        order: 1;
+        flex: none;
+    }
+    
+    .map-legend {
+        order: 2;
+        width: 100%;
+    }
+    
+    .restaurant-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .restaurant-image {
+        height: 150px;
+    }
+    
+    .category-list {
+        gap: 10px;
+    }
+    
+    .category-tag {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .map-section {
+        padding: 30px 0;
+    }
+    
+    /* Page Hero Responsive */
+    .page-hero {
+        padding: 140px 0 60px;
+        min-height: 50vh;
+    }
+    
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* Sections responsive */
+    .offers-section,
+    .timeline-section,
+    .partners-section,
+    .signup-section,
+    .contact-page,
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .offers-section h3,
+    .timeline-section h3,
+    .partners-section h3,
+    .signup-section h3,
+    .faq-section h3 {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .restaurant-form,
+    .nutritionist-form,
+    .contact-page-form {
+        padding: 30px 20px;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    /* Timeline Responsive */
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        align-items: flex-start;
+    }
+    
+    .timeline-number {
+        margin-right: 20px;
+    }
+    
+    .timeline-content {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+    
+    /* Contact Page Responsive */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .explore-btn {
+        padding: 12px 25px;
+    }
+    
+    .audience-card {
+        padding: 20px;
+    }
+    
+    #restaurant-map {
+        height: 250px !important;
+        min-height: 250px !important;
+    }
+    
+    /* Page Hero */
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .page-hero h2 {
+        font-size: 1rem;
+    }
+    
+    /* Grids */
+    .offers-grid,
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .offer-card {
+        padding: 30px 20px;
+    }
+    
+    .timeline-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Leaflet specific mobile fixes */
+.leaflet-touch .leaflet-bar a {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+}
+
+.leaflet-touch .leaflet-control-attribution {
+    font-size: 10px !important;
+}
+
+
+/* ==================== MAP SECTION RESPONSIVE ==================== */
+
+@media (max-width: 992px) {
+    .map-filters-container {
+        flex-direction: column;
+    }
+    
+    .filters-sidebar {
+        flex: none;
+        width: 100%;
+        position: static;
+        margin-bottom: 30px;
+    }
+    
+    .restaurant-card-vertical {
+        flex-direction: column;
+    }
+    
+    .restaurant-card-vertical .restaurant-image {
+        flex: none;
+        height: 200px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #restaurant-map {
+        height: 350px !important;
+    }
+    
+    .restaurant-card-vertical .restaurant-image {
+        height: 180px;
+    }
+    
+    .results-info {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .sort-options select {
+        width: 100%;
+    }
+    
+    .map-section h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #restaurant-map {
+        height: 300px !important;
+    }
+    
+    .restaurant-card-vertical .restaurant-image {
+        height: 150px;
+    }
+    
+    .filter-item {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .restaurant-card-vertical h4 {
+        font-size: 1.2rem;
+    }
+    
+    .map-section h3 {
+        font-size: 1.8rem;
+    }
+}

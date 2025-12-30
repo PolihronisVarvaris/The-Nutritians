@@ -1,0 +1,146 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, 
+        #ffffff 17%,
+        #ffffff 75%,
+    );
+    color: #053717;
+    line-height: 1.6;
+    min-height: 70vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h1, h2, h3, h4 {
+    color: #053717;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #053717;
+}
+
+a {
+    text-decoration: none;
+    color: #053717;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1a5c2e;
+}
+
+/* Common button styles */
+.explore-btn {
+    display: inline-block;
+    background-color: #053717;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: all 0.3s;
+    border: 2px solid #053717;
+}
+
+.explore-btn:hover {
+    background-color: transparent;
+    color: #053717;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(5, 55, 23, 0.1);
+}
+
+.submit-btn {
+    background-color: #053717;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #0a4d23;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(5, 55, 23, 0.2);
+}
+
+/* Common card styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Hero (used in multiple pages) */
+.page-hero {
+    background: 
+        linear-gradient(rgba(225, 235, 219, 0.7), rgba(225, 235, 219, 0.7));
+    background-size: cover;
+    text-align: center;
+    padding: 150px 0 80px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #053717;
+    font-weight: 700;
+}
+
+.page-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #053717;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}

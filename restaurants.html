@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Restaurants - The Nutritians</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/restaurants.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/c08c7a171cdeea2983594abb6d51b52d668d6d3d.png" alt="The Nutritions Logo">
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="restaurants.html" class="active">For Restaurants</a></li>
+                <li><a href="nutritionists.html">For Nutritionists</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero restaurant-hero">
+        <div class="container">
+            <h1>Empower Your Restaurant with Nutritional Transparency</h1>
+            <h2>Join the movement towards informed dining. Showcase your commitment to health and dietary needs.</h2>
+            <a href="#signup-form" class="explore-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="offers-section">
+        <div class="container">
+            <h3>What We Offer to Restaurants</h3>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h4>Nutritional Analysis</h4>
+                    <p>Detailed breakdown of calories, macros, and key nutrients for every menu item</p>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-badge-check"></i>
+                    </div>
+                    <h4>Certification Program</h4>
+                    <p>Earn verified badges for dietary categories (vegan, gluten-free, keto, etc.)</p>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>Targeted Marketing</h4>
+                    <p>Reach health-conscious customers actively searching for your type of cuisine</p>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Menu Analytics</h4>
+                    <p>Understand which healthy options are most popular and profitable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h3>How It Works</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h4>Week 1: Initial Consultation & Needs Analysis</h4>
+                        <p>Meeting with the restaurant team to understand their specific needs, dietary requirements, and how they want to present calorie information.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h4>Week 2: Calorie Counting & Staff Training</h4>
+                        <p>Collecting menu data and calculating nutritional information for all dishes. Providing training to restaurant staff on how to present and explain nutritional information to customers.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h4>Week 3: Creating Promotional Materials</h4>
+                        <p>Design and creation of promotional materials to support the rollout of the calorie counting service, tailored to the restaurant's brand and its audience.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h4>Week 4: Service Launch & Promotion</h4>
+                        <p>Official launch of the service and promotion to customers, both online and offline. Ongoing support and feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <h3>Trusted by Leading Restaurants</h3>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Green Bistro</span>
+                </div>
+                <div class="partner-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Vegan Delight</span>
+                </div>
+                <div class="partner-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>Organic Kitchen</span>
+                </div>
+                <div class="partner-logo">
+                    <i class="fas fa-fish"></i>
+                    <span>Sea Fresh</span>
+                </div>
+                <div class="partner-logo">
+                    <i class="fas fa-apple-alt"></i>
+                    <span>Health Hub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section class="signup-section" id="signup-form">
+        <div class="container">
+            <h3>Join The Nutritions Today</h3>
+            <p>Fill out this form and our restaurant partnership team will contact you within 24 hours.</p>
+            
+            <form class="restaurant-form" id="restaurant-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Restaurant Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" placeholder="Restaurant Location (City)" required>
+                </div>
+                
+                <div class="form-group">
+                    <select required>
+                        <option value="">Type of Cuisine</option>
+                        <option value="american">American</option>
+                        <option value="italian">Italian</option>
+                        <option value="asian">Asian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <select required>
+                        <option value="">Number of Menu Items</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-30">11-30</option>
+                        <option value="31-50">31-50</option>
+                        <option value="50+">50+</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Tell us about your restaurant and why you're interested in joining..." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/c08c7a171cdeea2983594abb6d51b52d668d6d3d.png" alt="The Nutritions Logo">
+                        </a>
+                    </div>
+                    <p>Revolutionizing informed food choices for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="restaurants.html">For Restaurants</a></li>
+                        <li><a href="nutritionists.html">For Nutritionists</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 The Nutritions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    hamburger.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Form submission
+            const restaurantForm = document.getElementById('restaurant-form');
+            if (restaurantForm) {
+                restaurantForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your application! Our team will contact you within 24 hours.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nutritians - Informed Food Choices</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/c08c7a171cdeea2983594abb6d51b52d668d6d3d.png" alt="The Nutritians Logo">
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="restaurants.html">For Restaurants</a></li>
+                <li><a href="nutritionists.html">For Nutritians</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" style="background-image: url('images/c34da73dcdb926cdbc847f14e64486e1d0891c1d.png');">
+        <div class="container">
+            <h1>The Nutritians.</h1>
+            <h2>We revolutionize the way you make informed food choices.</h2>
+            <a href="#explore" class="explore-btn">Explore More</a>
+            <hr>
+        </div>
+    </section>
+
+    <!-- What Is Section -->
+    <section class="what-is" id="explore">
+        <div class="container">
+            <h3>The Nutritians Is...</h3>
+            <div class="audience-cards">
+                <div class="audience-card">
+                    <h4><i class="fas fa-utensils"></i> For Restaurants</h4>
+                    <p>The easiest way to offer nutritional transparency to your customers.</p>
+                </div>
+                <div class="audience-card">
+                    <h4><i class="fas fa-user-md"></i> For Nutritians</h4>
+                    <p>A platform to revolutionize and modernize your profession while helping you acquire new clients.</p>
+                </div>
+                <div class="audience-card">
+                    <h4><i class="fas fa-users"></i> For Consumers</h4>
+                    <p>Your go-to platform for finding restaurants that fit your nutritional needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h3>About Us</h3>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At The Nutritians, we believe everyone deserves to know exactly what they're eating. Founded in 2023, our mission is to bring transparency to the food industry by connecting health-conscious consumers with restaurants that care about nutritional information.</p>
+                    <p>Our platform uses advanced nutritional analysis and verified data to provide accurate information about restaurant meals, helping you make informed choices that align with your dietary needs and health goals.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h4>500+</h4>
+                        <p>Partner Restaurants</p>
+                    </div>
+                    <div class="stat">
+                        <h4>50,000+</h4>
+                        <p>Active Users</p>
+                    </div>
+                    <div class="stat">
+                        <h4>100+</h4>
+                        <p>Certified Nutritionists</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Restaurants Section -->
+    <section class="restaurants" id="restaurants">
+        <div class="container">
+            <h3>For Restaurants</h3>
+            <div class="restaurant-features">
+                <div class="feature">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Nutritional Analysis</h4>
+                    <p>We provide detailed nutritional analysis of your menu items to share with customers.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bullhorn"></i>
+                    <h4>Increased Visibility</h4>
+                    <p>Get discovered by health-conscious customers looking for restaurants like yours.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-certificate"></i>
+                    <h4>Certification</h4>
+                    <p>Earn nutrition badges that build trust and credibility with your customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Nutritionists Section -->
+    <section class="nutritionists" id="nutritionists">
+        <div class="container">
+            <h3>For Nutritionists</h3>
+            <div class="nutritionist-benefits">
+                <div class="benefit">
+                    <i class="fas fa-user-plus"></i>
+                    <h4>Client Acquisition</h4>
+                    <p>Connect with potential clients looking for professional nutritional guidance.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-tools"></i>
+                    <h4>Modern Tools</h4>
+                    <p>Access our platform to analyze restaurant meals and provide better recommendations.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Professional Network</h4>
+                    <p>Join our community of nutrition professionals to share knowledge and collaborate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Don't miss out</h3>
+            <p>Be the first to explore our revolutionary app!</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Get Early Access</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Remove the old categories section entirely - this should be gone -->
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h3>Our solution for users</h3>
+            <div class="solution-content">
+                <p>The Nutritions is your go-to place for nutritional transparency when eating out. Whether you're grabbing lunch on the go or planning a dinner out with friends, we help you know exactly what's on your plate, from calories to key nutritional facts.</p>
+                <div class="highlight">
+                    <p>No more guessing. No more hidden ingredients. With The Nutritions, you get the clarity and confidence to align your meals with your lifestyle, health goals, or dietary needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories & Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h3>Find Restaurants Near You</h3>
+            
+            <div class="map-filters-container">
+                <!-- Left sidebar (20%) -->
+                <div class="filters-sidebar">
+                    <!-- Nutritional Categories -->
+                    <div class="filter-group">
+                        <h4>Nutritional Category</h4>
+                        <div class="filter-list" id="nutrition-category-list">
+                            <div class="filter-item" data-category="vegan">
+                                <span class="filter-dot vegan"></span>
+                                Vegan
+                            </div>
+                            <div class="filter-item" data-category="vegetarian">
+                                <span class="filter-dot vegetarian"></span>
+                                Vegetarian
+                            </div>
+                            <div class="filter-item" data-category="nut-free">
+                                <span class="filter-dot nut-free"></span>
+                                Nut Free
+                            </div>
+                            <div class="filter-item" data-category="gluten-free">
+                                <span class="filter-dot gluten-free"></span>
+                                Gluten Free
+                            </div>
+                            <div class="filter-item" data-category="lactose-free">
+                                <span class="filter-dot lactose-free"></span>
+                                Lactose Free
+                            </div>
+                            <div class="filter-item" data-category="keto">
+                                <span class="filter-dot keto"></span>
+                                Keto
+                            </div>
+                            <div class="filter-item" data-category="high-protein">
+                                <span class="filter-dot high-protein"></span>
+                                High Protein
+                            </div>
+                            <div class="filter-item" data-category="low-carb">
+                                <span class="filter-dot low-carb"></span>
+                                Low Carb
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Establishment Categories -->
+                    <div class="filter-group">
+                        <h4>Establishment Category</h4>
+                        <div class="filter-list" id="establishment-category-list">
+                            <div class="filter-item" data-establishment="restaurant">
+                                <span class="filter-icon"><i class="fas fa-utensils"></i></span>
+                                Restaurant
+                            </div>
+                            <div class="filter-item" data-establishment="brunch">
+                                <span class="filter-icon"><i class="fas fa-coffee"></i></span>
+                                Brunch
+                            </div>
+                            <div class="filter-item" data-establishment="canteen">
+                                <span class="filter-icon"><i class="fas fa-school"></i></span>
+                                Canteen
+                            </div>
+                            <div class="filter-item" data-establishment="hotel">
+                                <span class="filter-icon"><i class="fas fa-hotel"></i></span>
+                                Hotel
+                            </div>
+                            <div class="filter-item" data-establishment="bar">
+                                <span class="filter-icon"><i class="fas fa-glass-cheers"></i></span>
+                                Bar
+                            </div>
+                            <div class="filter-item" data-establishment="cafe">
+                                <span class="filter-icon"><i class="fas fa-mug-hot"></i></span>
+                                Café
+                            </div>
+                            <div class="filter-item" data-establishment="fast-food">
+                                <span class="filter-icon"><i class="fas fa-hamburger"></i></span>
+                                Fast Food
+                            </div>
+                            <div class="filter-item" data-establishment="fine-dining">
+                                <span class="filter-icon"><i class="fas fa-star"></i></span>
+                                Fine Dining
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Clear Filters Button -->
+                    <button class="clear-filters-btn" id="clear-filters">
+                        <i class="fas fa-times"></i> Clear All Filters
+                    </button>
+                </div>
+                
+                <!-- Right content (80%) -->
+                <div class="map-main-content">
+                    <!-- Map -->
+                    <div class="map-container-single">
+                        <div id="restaurant-map"></div>
+                    </div>
+                    
+                    <!-- Results Count -->
+                    <div class="results-info">
+                        <div class="results-count">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="results-number">12</span> restaurants found
+                        </div>
+                        <div class="sort-container">
+                            <div class="sort-label">
+                                <i class="fas fa-sort-amount-down"></i>
+                                Sort by:
+                            </div>
+                            <div class="custom-select">
+                                <select id="sort-by">
+                                    <option value="distance">Distance</option>
+                                    <option value="rating">Rating</option>
+                                    <option value="name">Name</option>
+                                    <option value="price">Price</option>
+                                </select>
+                                <div class="select-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Restaurant Cards (vertical stack) -->
+                    <div class="restaurant-list-vertical" id="restaurant-list">
+                        <!-- Card 1 -->
+                        <div class="restaurant-card-vertical">
+                            <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                                <div class="restaurant-rating">
+                                    <i class="fas fa-star"></i> 4.5
+                                </div>
+                                <div class="restaurant-establishment-tag">
+                                    <i class="fas fa-utensils"></i> Restaurant
+                                </div>
+                            </div>
+                            <div class="restaurant-info">
+                                <h4>Green Garden Restaurant</h4>
+                                <div class="restaurant-tags">
+                                    <span class="restaurant-tag vegan">Vegan</span>
+                                    <span class="restaurant-tag gluten-free">Gluten Free</span>
+                                    <span class="restaurant-tag organic">Organic</span>
+                                </div>
+                                <div class="restaurant-description">
+                                    Organic vegan restaurant with farm-to-table concept, specializing in locally sourced ingredients and seasonal menus.
+                                </div>
+                                <div class="restaurant-details">
+                                    <div class="restaurant-address">
+                                        <i class="fas fa-map-marker-alt"></i> 123 Green Street, Health City
+                                    </div>
+                                    <div class="restaurant-distance">
+                                        <i class="fas fa-walking"></i> 0.8 miles away
+                                    </div>
+                                    <div class="restaurant-price">
+                                        <i class="fas fa-dollar-sign"></i> $$
+                                    </div>
+                                </div>
+                                <button class="view-details-btn">
+                                    <i class="fas fa-info-circle"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="restaurant-card-vertical">
+                            <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                                <div class="restaurant-rating">
+                                    <i class="fas fa-star"></i> 4.2
+                                </div>
+                                <div class="restaurant-establishment-tag">
+                                    <i class="fas fa-hotel"></i> Hotel Restaurant
+                                </div>
+                            </div>
+                            <div class="restaurant-info">
+                                <h4>Protein Power Bar</h4>
+                                <div class="restaurant-tags">
+                                    <span class="restaurant-tag high-protein">High Protein</span>
+                                    <span class="restaurant-tag keto">Keto</span>
+                                    <span class="restaurant-tag low-carb">Low Carb</span>
+                                </div>
+                                <div class="restaurant-description">
+                                    Specialized in high-protein meals and keto options, perfect for fitness enthusiasts and health-conscious diners.
+                                </div>
+                                <div class="restaurant-details">
+                                    <div class="restaurant-address">
+                                        <i class="fas fa-map-marker-alt"></i> 456 Fitness Ave, Health City
+                                    </div>
+                                    <div class="restaurant-distance">
+                                        <i class="fas fa-walking"></i> 1.2 miles away
+                                    </div>
+                                    <div class="restaurant-price">
+                                        <i class="fas fa-dollar-sign"></i> $$$
+                                    </div>
+                                </div>
+                                <button class="view-details-btn">
+                                    <i class="fas fa-info-circle"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="restaurant-card-vertical">
+                            <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                                <div class="restaurant-rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </div>
+                                <div class="restaurant-establishment-tag">
+                                    <i class="fas fa-mug-hot"></i> Café
+                                </div>
+                            </div>
+                            <div class="restaurant-info">
+                                <h4>Mediterranean Delight</h4>
+                                <div class="restaurant-tags">
+                                    <span class="restaurant-tag vegetarian">Vegetarian</span>
+                                    <span class="restaurant-tag lactose-free">Lactose Free</span>
+                                    <span class="restaurant-tag nut-free">Nut Free</span>
+                                </div>
+                                <div class="restaurant-description">
+                                    Authentic Mediterranean cuisine with a focus on fresh vegetables, olive oil, and healthy grains.
+                                </div>
+                                <div class="restaurant-details">
+                                    <div class="restaurant-address">
+                                        <i class="fas fa-map-marker-alt"></i> 789 Sea View Blvd, Health City
+                                    </div>
+                                    <div class="restaurant-distance">
+                                        <i class="fas fa-walking"></i> 0.5 miles away
+                                    </div>
+                                    <div class="restaurant-price">
+                                        <i class="fas fa-dollar-sign"></i> $$
+                                    </div>
+                                </div>
+                                <button class="view-details-btn">
+                                    <i class="fas fa-info-circle"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/c08c7a171cdeea2983594abb6d51b52d668d6d3d.png" alt="The Nutritions Logo">
+                        </a>
+                    </div>
+                    <p>Revolutionizing informed food choices for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#restaurants">For Restaurants</a></li>
+                        <li><a href="#nutritionists">For Nutritians</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 The Nutritions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
