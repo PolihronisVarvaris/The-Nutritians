@@ -162,10 +162,18 @@ hr {
 
 /* Newsletter Section */
 .newsletter {
+    background-image: url('./images/mailus.png');
     background-color: #053717;
     color: white;
     text-align: center;
 }
+
+/* .newsletter .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+} */
 
 .newsletter h3 {
     color: white;
