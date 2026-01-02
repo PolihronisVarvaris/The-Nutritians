@@ -472,17 +472,32 @@ function sortRestaurants(sortBy) {
 
 function showRestaurantDetails(id) {
     const restaurant = allRestaurants.find(r => r.id === id);
-    if (restaurant) {
-        alert(`Details for ${restaurant.name}:\n\n` +
-              `${restaurant.description}\n\n` +
-              `Address: ${restaurant.address}\n` +
-              `Rating: ${restaurant.rating}/5\n` +
-              `Distance: ${restaurant.distance}\n` +
-              `Price: ${restaurant.price}\n` +
-              `Categories: ${restaurant.categories.map(c => c.replace('-', ' ')).join(', ')}\n` +
-              `Establishment: ${establishmentLabels[restaurant.establishment]}`);
-    }
+    if (!restaurant) return;
+
+    document.getElementById('modal-name').textContent = restaurant.name;
+    document.getElementById('modal-description').textContent = restaurant.description;
+    document.getElementById('modal-address').textContent = restaurant.address;
+    document.getElementById('modal-rating').textContent = restaurant.rating + '/5';
+    document.getElementById('modal-distance').textContent = restaurant.distance;
+    document.getElementById('modal-price').textContent = restaurant.price;
+    document.getElementById('modal-categories').textContent =
+        restaurant.categories.map(c => c.replace('-', ' ')).join(', ');
+    document.getElementById('modal-establishment').textContent =
+        establishmentLabels[restaurant.establishment];
+
+    document.getElementById('restaurant-modal').classList.add('active');
 }
+
+function closeModal() {
+    document.getElementById('restaurant-modal').classList.remove('active');
+    document.getElementById('restaurant-modal').addEventListener('click', e => {
+        if (e.target.id === 'restaurant-modal') closeModal();
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeModal();
+    });
+}
+
 
 function setupMobileMenu() {
     const hamburger = document.getElementById('hamburger');

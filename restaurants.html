@@ -26,7 +26,7 @@
             </button>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html">About Us</a></li>
                 <li><a href="restaurants.html" class="active">For Restaurants</a></li>
                 <li><a href="nutritionists.html">For Nutritionists</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -84,7 +84,7 @@
     </section>
 
     <!-- Timeline Section -->
-    <section class="timeline-section">
+    <!-- <section class="timeline-section">
         <div class="container">
             <h3>How It Works</h3>
             <div class="timeline">
@@ -121,12 +121,53 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section class="timeline-outer-section">
+        <div class="timeline-wrapper">
+            <div class="timeline-container">
+                <section class="timeline-section section__large section--A section--black">
+                    <p>How we deliver</p>
+                </section>
+                <section class="timeline-section section--C section--yellow">
+                    <div class="section__container">
+                        <div class="box box--1">
+                            <div class="box__media"></div>
+                                <p class="box__title">Week 1: Initial Consultation & Needs Analysis</p>
+                                <p class="box__subtitle">Meeting with the restaurant team to understand their specific needs, dietary requirements, and how they want to present calorie information.</p>
+                        </div>
+                        <div class="box box--2">
+                            <div class="box__media"></div>
+                            <p class="box__title">Week 2: Calorie Counting & Staff Training</p>
+                            <p class="box__subtitle">Collecting menu data and calculating nutritional information for all dishes.<br>Providing training to restaurant staff on how to present and explain nutritional information to customers.</p>
+                        </div>
+                        <div class="box box--3">
+                            <div class="box__media"></div>
+                            <p class="box__title">Week 3: Creating Promotional Materials</p>
+                            <p class="box__subtitle">Design and creation of promotional materials to support the rollout of the calorie counting service,<br>tailored to the restaurant's brand and its audience.</p>
+                        </div>
+                        <div class="box box--4">
+                            <div class="box__media"></div>
+                            <p class="box__title">Week 4: Service Launch & Promotion</p>
+                            <p class="box__subtitle">Official launch of the service and promotion to customers, both online and offline.<br>Ongoing support and feedback.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="timeline-section section__large section--B section--black">
+                    <h5>Sponsors</h5>
+                </section>
+            </div>
+        </div>
+        <br>
+
     </section>
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script><script  src="./timeline.js"></script>
 
     <!-- Trusted Partners Section -->
-    <section class="partners-section">
+    <!-- <section class="partners-section">
         <div class="container">
-            <h3>Trusted by Leading Restaurants</h3>
+            <h3>Trusted by the best</h3>
             <div class="partners-grid">
                 <div class="partner-logo">
                     <i class="fas fa-utensils"></i>
@@ -150,14 +191,49 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!--new Trusted Partners Section -->
+    <figure class="c-logo-carousel">
+        <div class="u-ticker-track">
+            <!-- Original logos -->
+             <div class="ticker-content">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_1" alt="Company 1">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_2" alt="Company 2">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_3" alt="Company 3">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_4" alt="Company 4">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_5" alt="Company 5">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_default_image_6" alt="Company 6">
+            </div>
+            <!-- Duplicate logos for seamless loop -->
+              <div class="ticker-content">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_1" alt="Company 1">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_2" alt="Company 2">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_3" alt="Company 3">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_4" alt="Company 4">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_demo_image_5" alt="Company 5">
+                <img src="https://www.digital-cognitive.com/web/image/website.s_reference_default_image_6" alt="Company 6">
+            </div>
+        </div>
+    </figure>
+
+
+
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
 
     <!-- Signup Form Section -->
     <section class="signup-section" id="signup-form">
+        
         <div class="container">
             <h3>Join The Nutritions Today</h3>
             <p>Fill out this form and our restaurant partnership team will contact you within 24 hours.</p>
             
+            <img src="images/spoonleft.png" class="form-image" alt="Decorative spoon">
+            <img src="images/spoonright.png" class="form-image-right" alt="Decorative spoon">
             <form class="restaurant-form" id="restaurant-form">
                 <div class="form-row">
                     <div class="form-group">
@@ -211,6 +287,7 @@
                     <i class="fas fa-paper-plane"></i> Submit Application
                 </button>
             </form>
+
         </div>
     </section>
 
@@ -252,6 +329,7 @@
             </div>
             <p class="copyright">&copy; 2025 The Nutritions. All rights reserved.</p>
         </div>
+        <img src="images/footerimage.png" class="footer-image" alt="">
     </footer>
 
     <script>

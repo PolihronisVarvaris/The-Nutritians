@@ -64,7 +64,7 @@
 
 /* ==================== TIMELINE SECTION ==================== */
 
-.timeline-section {
+/* .timeline-section {
     padding: 80px 0;
     background-color: white;
 }
@@ -143,6 +143,209 @@
 .timeline-content p {
     color: #666;
     line-height: 1.6;
+} */
+
+/* ==================== new TIMELINE SECTION ==================== */
+
+/* ==================== TIMELINE HORIZONTAL SCROLL ==================== */
+
+/* Outer section that contains everything */
+.timeline-outer-section {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 80px 0;
+}
+
+.timeline-outer-section h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #053717;
+}
+
+/* Wrapper that will be pinned */
+.timeline-wrapper {
+    width: 100%;
+    height: 100vh; /* Full viewport height when pinned */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container for horizontal scrolling */
+.timeline-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: 100%;
+    will-change: transform;
+}
+
+/* Individual timeline sections */
+.timeline-section {
+    position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 110vh;
+    flex-shrink: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Styles for your sections */
+.section__large {
+    width: 100vw;
+}
+
+.section__container {
+    display: flex;
+    width: 400vw; /* 4 boxes * 100vw each */
+    height: 100%;
+}
+
+.section--black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.section--dark-grey {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.section--yellow {
+    background-color: var(--yellow);
+    width: 400vw; /* Special width for section C */
+}
+
+.section--light-grey {
+    background-color: var(--light-grey);
+}
+
+.section--white {
+    background-color: var(--white);
+}
+
+/* Box styles for section C */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items:top;
+    justify-content: top;
+    text-align: center; /* Center text */
+    width: 100vw;
+    height: 100%;
+    color: var(--white);
+    font-size: 30px;
+}
+
+.box__media {
+    width: 20vw;
+    height: 20vw;
+    background-color: var(--white);
+    border-radius: 100%;
+    margin-bottom: 0px;
+}
+
+.box__title { 
+    font-size: 30px; 
+    font-weight: bold; 
+    margin: 5px 0; 
+} 
+
+.box__subtitle { 
+    font-size: 18px; 
+    opacity: 0.8; 
+    margin: 0; 
+}
+
+.box p {
+    font-weight: bold;
+    color: white;
+}
+
+.box--1 {
+    background-color: #000000; /* Coral red */
+    color: white;
+}
+
+.box--2 {
+    background-color: #053717; /* Turquoise */
+    color: white;
+}
+
+.box--3 {
+    background-color: #000000; /* Yellow */
+    color: #ffffff; /* Dark text for contrast */
+}
+
+.box--4 {
+    background-color: #053717; /* Mint green */
+    color: white;
+}
+
+/* Add scroll indicator for user experience */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #053717;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0.7;
+    z-index: 10;
+    mix-blend-mode:screen;  
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: bounce 6s infinite;
+    mix-blend-mode:normal;  
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Hide horizontal scrollbar */
+body {
+    overflow-x: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-section {
+        font-size: 30px;
+    }
+    
+    .box {
+        font-size: 20px;
+    }
+    
+    .box__media {
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    .scroll-indicator {
+        font-size: 0.9rem;
+        bottom: 20px;
+    }
 }
 
 /* ==================== PARTNERS SECTION ==================== */
@@ -223,7 +426,7 @@
 .restaurant-form {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f8fdf5;
+    background-color: #053717;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(5, 55, 23, 0.08);
@@ -261,10 +464,149 @@
 .form-group textarea:focus {
     outline: none;
     border-color: #053717;
-    box-shadow: 0 0 0 2px rgba(5, 55, 23, 0.1);
+    box-shadow: 0 0 0 2px rgba(5, 55, 23, 0.264);
 }
 
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+/* ==================== FORM IMAGE ==================== */
+
+/* Container for the form section */
+.signup-section {
+    position: relative; /* Added for positioning the image */
+    overflow: visible; /* Ensure overlapping image is visible */
+}
+
+/* Form container */
+.restaurant-form {
+    position: relative;
+    z-index: 1; /* Ensure form stays above the image background */
+}
+
+/* Form image styling */
+.form-image {
+    position: absolute;
+    top: 18px; /* Adjust to position vertically */
+    left: 0px; /* Adjust to position horizontally */
+    width: 1113px; /* Adjust size as needed */
+    rotate: 10deg;
+    height: auto;
+    z-index: 2; /* Place behind the form */
+    opacity: 1;
+    pointer-events: none; /* Prevent interfering with form interaction */
+    transform: rotate(-10deg); /* Optional: Add slight rotation for visual interest */
+}
+
+/* For smaller screens, adjust the image position */
+@media (max-width: 992px) {
+    .form-image {
+        width: 200px;
+        left: -60px;
+        top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-image {
+        width: 150px;
+        left: -40px;
+        top: -20px;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-image {
+        display: none; /* Hide on very small screens if it takes too much space */
+    }
+}
+
+
+/* ==================== FORM IMAGE right==================== */
+
+
+/* Form image styling */
+.form-image-right {
+    position: absolute;
+    bottom: 30px; /* Adjust to position vertically */
+    right: 0px; /* Adjust to position horizontally */
+    width: 400px; /* Adjust size as needed */
+    rotate: 10deg;
+    height: auto;   
+    z-index: 2; /* Place behind the form */
+    opacity: 1;
+    pointer-events: none; /* Prevent interfering with form interaction */
+    transform: rotate(-10deg); /* Optional: Add slight rotation for visual interest */
+}
+
+/* For smaller screens, adjust the image position */
+@media (max-width: 992px) {
+    .form-image-right {
+        width: 200px;
+        left: -60px;
+        bottom: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-image-right {
+        width: 150px;
+        right: -40px;
+        bottom: -20px;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-image-right {
+        display: none; /* Hide on very small screens if it takes too much space */
+    }
+}
+
+/* ==================== LOGO CAROUSEL SECTION ==================== */
+.c-logo-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.u-ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 17s linear infinite;
+  animation-direction:alternate-reverse;
+}
+
+.ticker-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 35px; /* equal spacing */
+}
+
+.u-ticker-track img {
+  width: 220px;
+  height: auto;
+  transition: 0.3s;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% { 
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .u-ticker-track img {
+    width: 160px;
+  }
+}
+@media (max-width: 480px) {
+  .u-ticker-track img {
+    width: 120px;
+  }
 }

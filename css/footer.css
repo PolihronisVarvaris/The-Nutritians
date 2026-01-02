@@ -3,6 +3,7 @@ footer {
     background-color: #053717;
     color: white;
     padding: 60px 0 30px;
+    position: relative;
 }
 
 .footer-content {
@@ -100,4 +101,21 @@ footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
+}
+
+.footer-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: clamp(200px, 30vw, 180px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .footer-image {
+        right: 0px;
+        bottom: 0px;
+        opacity: 0.2;
+    }
 }

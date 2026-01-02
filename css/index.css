@@ -1,3 +1,161 @@
+/* ================= OVERLAY ================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at top left, rgba(72, 153, 108, 0.35), transparent 45%),
+        radial-gradient(circle at bottom right, rgba(5, 55, 23, 0.85), #053717 60%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+/* ================= FLOATING CARD ================= */
+.modal {
+    position: relative;
+    width: min(560px, 92%);
+    padding: 42px 38px;
+    border-radius: 26px;
+
+    background:
+        linear-gradient(160deg, #ffffff, #eef6f1);
+
+    box-shadow:
+        0 40px 120px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+    animation: modalFloatIn 0.5s cubic-bezier(.2,.9,.3,1);
+    overflow: hidden;
+}
+
+/* Decorative blob */
+.modal::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(5, 55, 23, 0.18), transparent 70%);
+    top: -80px;
+    right: -60px;
+    border-radius: 50%;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes modalFloatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ================= TITLE ================= */
+.modal h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #053717;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+/* ================= DESCRIPTION ================= */
+#modal-description {
+    font-size: 1.05rem;
+    color: #4f6b5d;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* ================= INFO GRID ================= */
+.modal-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.modal-info p {
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(5, 55, 23, 0.06),
+        rgba(5, 55, 23, 0.02)
+    );
+
+    color: #163528;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    border: 1px solid rgba(5, 55, 23, 0.12);
+}
+
+/* Make long text span full width */
+.modal-info p:nth-child(1),
+.modal-info p:nth-child(2) {
+    grid-column: span 2;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+
+    background: linear-gradient(
+        145deg,
+        #053717,
+        #0b5a2a
+    );
+
+    color: #ffffff;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 520px) {
+    .modal {
+        padding: 30px 24px;
+        border-radius: 20px;
+    }
+
+    .modal-info {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-info p {
+        grid-column: span 1 !important;
+    }
+}
+
+
+/* ================= MAIN STYLES ================= */
+
 /* Hero Section */
 .hero {
     background: 
@@ -7,7 +165,7 @@
     text-align: center;
     padding: 150px 0 80px;
     position: relative;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
 }
@@ -220,7 +378,7 @@ hr {
 
 /* Solution Section */
 .solution {
-    background-color: #e0f2e9;
+    background-color: #ffffff;
 }
 
 .solution h3 {
@@ -243,69 +401,20 @@ hr {
     border-left: 5px solid #053717;
 }
 
-/* Categories Section */
-.categories {
-    background-color: #e0f2e9;
-}
 
-.categories h3 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}   
-
-.category-instruction {
-    text-align: center;
-    margin-bottom: 30px;
-    font-style: italic;
-    color: #666;
-}
-
-.category-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.category-tag {
-    background-color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-    color: #053717;
-    transition: all 0.3s;
-    cursor: pointer;
-    border: 2px solid #e0f2e9;
-}
-
-.category-tag:hover {
-    background-color: #e0f2e9;
-    transform: translateY(-3px);
-}
-
-.category-tag.active {
-    background-color: #053717;
-    color: white;
-    border-color: #053717;
-    box-shadow: 0 5px 15px rgba(5, 55, 23, 0.3);
-}
 
 /* ==================== MAP SECTION REDESIGN ==================== */
 
 .map-section {
     padding: 40px 0;
-    background-color: #f8fdf5;
+    background-color: #053717;
 }
 
 .map-section h3 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #053717;
+    color: #ffffff;
 }
 
 .map-filters-container {
@@ -429,7 +538,7 @@ hr {
     width: 100%;
     background-color: transparent;
     color: #053717;
-    border: 2px solid #e0f2e9;
+    border: 2px solid #e0e5f2;
     padding: 12px 20px;
     border-radius: 8px;
     font-weight: 600;
@@ -512,12 +621,12 @@ hr {
     align-items: center;
     gap: 8px;
     font-weight: 600;
-    color: #053717;
+    color: #ffffff;
     font-size: 1rem;
 }
 
 .sort-label i {
-    color: #4CAF50;
+    color: #ffffff;
 }
 
 .custom-select {
@@ -591,7 +700,7 @@ hr {
     overflow: visible;
     box-shadow: 0 4px 15px rgba(5, 55, 23, 0.08);
     transition: all 0.3s ease;
-    border: 1px solid #e0f2e9;
+    border: 2px solid #053717;
     display: flex;
     min-height: 220px;
     margin: 0;
@@ -890,16 +999,17 @@ hr {
 
 /* Fix for Leaflet zoom control overlapping navbar */
 .leaflet-control-zoom {
-    position: fixed !important;
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 5px !important;
+    right: auto !important;
     top: auto !important;
-    bottom: 30px !important;
-    right: 15px !important;
-    left: auto !important;
+
     border: none !important;
     box-shadow: 0 3px 10px rgba(5, 55, 23, 0.15) !important;
     border-radius: 10px !important;
     overflow: hidden;
-    z-index: 1000 !important; /* Below navbar (1000) but above map */
+    z-index: 400 !important; /* inside map */
 }
 
 .leaflet-control-zoom a {
@@ -931,28 +1041,14 @@ hr {
 }
 
 .leaflet-control-zoom a.leaflet-disabled {
-    background-color: #f8fdf5 !important;
-    color: #aaa !important;
+    background-color: #000000 !important;
+    color: #aaa !important; 
     cursor: not-allowed !important;
 }
 
 /* Fix for attribution control */
 .leaflet-control-attribution {
-    position: fixed !important;
-    bottom: 15px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    padding: 5px 15px !important;
-    border-radius: 20px !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-    font-size: 11px !important;
-    max-width: 300px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    z-index: 800 !important;
-    border: 1px solid #e0f2e9 !important;
+    display: none !important;
 }
 
 .leaflet-control-attribution a {
@@ -978,9 +1074,105 @@ hr {
 
 /* Alternative: Hide only on mobile */
 @media (max-width: 768px) {
-    .leaflet-control-attribution {
-        font-size: 9px !important;
-        padding: 3px 10px !important;
-        max-width: 250px !important;
+    .leaflet-control-zoom {
+        transform: scale(0.9);
+        bottom: 15px !important;
+        left: 15px !important;
+    }
+}
+
+
+
+/* Meet The Team Section */
+.team {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 400px;
+
+  }
+
+  .team .title {
+    width: 25%;
+  }
+
+  .team .title h1 {
+    font-size: 78px;
+    color: #053717;
+  }
+
+  .team .membs {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .membs .mem {
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: width 0.6s ease; /* Smooth transition for hover effect */
+    display: flex; /* Use flexbox to center the image */
+    align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+    margin: 0 5px;
+    position: relative;
+  }
+
+  .membs .mem img {
+    height: 100%; /* Ensure the image takes full height */
+    width: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: center; /* Center the image */
+    display: block;
+    filter: grayscale(100%); /* Apply black and white filter */
+    transition: filter 0.3s ease; /* Smooth transition for filter effect */
+  }
+
+  .membs .mem:hover {
+    width: 40%;
+  }
+  .membs .mem:hover img {
+    filter: none; /* Remove the black and white filter on hover */
+  }
+  .membs .mem .disc {
+    position: absolute;
+    z-index: 10;
+    bottom: 30px;
+    width: 80%;
+    padding: 10px;
+    background: #27272a;
+    backdrop-filter: blur(3.25px);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: white;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.04);
+border: 2px solid rgba(10, 13, 23, 0.05);
+backdrop-filter: blur(190px);
+
+  }
+  .membs .mem:hover .disc {
+    display: block;
+    opacity: 1;
+  }
+
+  .footer-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: clamp(200px, 30vw, 180px);
+    opacity: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .footer-image {
+        right: 0px;
+        bottom: 0px;
+        opacity: 0.2;
     }
 }
